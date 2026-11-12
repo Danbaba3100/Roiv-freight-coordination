@@ -361,3 +361,25 @@ body{background:var(--white);color:var(--ink)}
 .article-back{margin-top:35px;font-size:13px;font-weight:700;color:var(--navy)}
 .article-back a:hover,.article-read-link:hover{color:#a45a25}
 @media(max-width:680px){.article-detail{padding-top:38px;padding-bottom:60px}.article-detail-wrap{width:min(100% - 32px,850px)}.article-lead{font-size:17px}.article-contact{padding:24px}}
+
+/* Wyoming local SEO content sections */
+.wyoming-local-section{background:#f7f3e9;padding-top:88px;padding-bottom:88px}
+.wyoming-local-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(260px,.8fr);gap:64px;align-items:center}
+.wyoming-local-grid h2{font-size:clamp(28px,4vw,46px);line-height:1.12;margin:0 0 22px;color:#08172f}
+.wyoming-local-grid h2 em{color:#a92518;font-style:normal}
+.wyoming-local-grid p{max-width:720px;color:#536171;line-height:1.85}
+.wyoming-local-card{background:#08172f;color:#fffdf7;padding:34px;display:flex;flex-direction:column;gap:14px;border-top:4px solid #d4ad62}
+.wyoming-local-label,.wyoming-local-foot{font-size:10px;letter-spacing:.14em;font-weight:800;color:#e0bd78}
+.wyoming-local-card strong{font-size:25px}
+.wyoming-local-card p{color:#e5e9ef;margin:0}
+.wyoming-local-card a{color:#fff;font-weight:700}
+.wyoming-local-foot{margin-top:12px}
+.wyoming-local-actions{display:flex;flex-wrap:wrap;gap:22px;margin-top:26px}
+.wyoming-services-note{padding:72px 24px;background:#f7f3e9}
+.wyoming-services-note-inner{max-width:850px;margin:auto}
+.wyoming-services-note h2{font-size:clamp(27px,4vw,40px);line-height:1.15;color:#08172f;margin:0 0 18px}
+.wyoming-services-note p{line-height:1.85;color:#536171}
+.wyoming-services-note a:not(.arrow-link){color:#8d321f;text-decoration:underline;text-underline-offset:3px}
+.wyoming-services-address{display:flex;flex-wrap:wrap;gap:10px 24px;padding-top:22px;margin-top:26px;border-top:1px solid #ded7c9;color:#08172f;font-size:14px}
+.wyoming-services-address a{font-weight:800}
+@media(max-width:760px){.wyoming-local-grid{grid-template-columns:1fr;gap:32px}.wyoming-local-section{padding-top:58px;padding-bottom:58px}.wyoming-local-card{padding:26px}.wyoming-local-actions{flex-direction:column;gap:14px}.wyoming-services-note{padding:52px 20px}}
