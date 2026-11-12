@@ -32,3 +32,41 @@
 .content-section .service-grid .service-card>*{position:relative;z-index:1}.content-section .service-grid .service-card .service-number{color:#e6c98f}.content-section .service-grid .service-card .service-icon{display:none}.content-section .service-grid .service-card h3{font-size:20px;color:#fff}.content-section .service-grid .service-card p{color:#e1e5ea;max-width:290px}.content-section .service-grid .service-card .card-arrow{color:#e3bd78}
 .article-card{background:#fff;box-shadow:0 12px 35px #0b18300c;border:1px solid #e8e5de}.article-card .tag{color:#a66c2c}.article-card h2{color:#13223a}
 .service-aside{background:linear-gradient(145deg,#0d1b30,#1c3454);color:#fff;border-top:3px solid #d7ad62}.service-aside p{color:#d0d8e0}.service-aside h3{color:#fff}.service-aside a{color:#e5bd76}
+
+
+/* MOTION SYSTEM — restrained, cinematic and accessible */
+@keyframes roivHeroZoom{from{transform:scale(1.09)}to{transform:scale(1.015)}}
+@keyframes roivFadeUp{from{opacity:0;transform:translate3d(0,28px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+@keyframes roivFadeIn{from{opacity:0}to{opacity:1}}
+@keyframes roivLineGrow{from{transform:scaleX(0);transform-origin:left}to{transform:scaleX(1);transform-origin:left}}
+.hero-premium .hero-image{animation:roivHeroZoom 1.8s cubic-bezier(.2,.7,.2,1) both}
+.hero-premium .hero-kicker,.hero-premium h1,.hero-premium .hero-copy,.hero-premium .hero-actions,.hero-premium .hero-proof{opacity:0;animation:roivFadeUp .85s cubic-bezier(.2,.7,.2,1) forwards}
+.hero-premium .hero-kicker{animation-delay:.18s}
+.hero-premium h1{animation-delay:.32s}
+.hero-premium .hero-copy{animation-delay:.48s}
+.hero-premium .hero-actions{animation-delay:.62s}
+.hero-premium .hero-proof{animation-delay:.8s}
+.hero-premium .hero-side-label{animation:roivFadeIn 1s .9s both}
+.hero-kicker span{transform-origin:left;animation:roivLineGrow .8s .35s both}
+.nav-cta,.button,.arrow-link,.fleet-arrow,.play-icon{transition:transform .3s ease,background-color .3s ease,color .3s ease,border-color .3s ease,box-shadow .3s ease}
+.nav-cta:hover,.button:hover{transform:translateY(-3px);box-shadow:0 12px 24px #06152b25}
+.fleet-card{isolation:isolate}
+.fleet-card img{transition:transform .9s cubic-bezier(.2,.7,.2,1),filter .6s ease}
+.fleet-card:hover img{transform:scale(1.075);filter:saturate(1)}
+.fleet-card:after{content:"";position:absolute;inset:0;border:1px solid #e1bb78;opacity:0;transform:scale(.97);transition:opacity .35s ease,transform .45s ease;pointer-events:none}
+.fleet-card:hover:after{opacity:.8;transform:scale(1)}
+.intro-photo-wrap img{transition:transform .9s cubic-bezier(.2,.7,.2,1),filter .6s ease}
+.intro-photo-wrap:hover img{transform:scale(1.025);filter:saturate(.95)}
+.values-premium .values-grid article{transition:transform .4s ease,background-color .4s ease,box-shadow .4s ease}
+.values-premium .values-grid article:hover{transform:translateY(-7px);background:#fff;box-shadow:0 18px 38px #0b183012}
+.process-steps article{transition:padding-left .35s ease,border-color .35s ease}
+.process-steps article:hover{padding-left:10px;border-color:#d7ad62}
+.cta-bg{animation:roivHeroZoom 18s ease-in-out infinite alternate}
+[data-reveal]{opacity:0;transform:translate3d(0,30px,0);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--reveal-delay,0ms)}
+[data-reveal].is-visible{opacity:1;transform:translate3d(0,0,0)}
+@media(max-width:680px){.hero-premium .hero-image{animation-duration:1.3s}.fleet-card:after{display:none}}
+@media(prefers-reduced-motion:reduce){
+ .hero-premium .hero-image,.hero-premium .hero-kicker,.hero-premium h1,.hero-premium .hero-copy,.hero-premium .hero-actions,.hero-premium .hero-proof,.hero-premium .hero-side-label,.hero-kicker span,.cta-bg{animation:none!important;opacity:1!important;transform:none!important}
+ [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}
+ .fleet-card img,.intro-photo-wrap img,.values-premium .values-grid article,.process-steps article{transition:none!important}
+}
