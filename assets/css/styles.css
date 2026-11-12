@@ -200,3 +200,75 @@ body{background:#fffdfa;color:#2d2521}
 @media(max-width:680px){
  .hero-split .hero-shade{background:linear-gradient(90deg,rgba(40,33,29,.91),rgba(40,33,29,.58)),linear-gradient(0deg,#28211d 0%,rgba(40,33,29,.84) 42%,rgba(40,33,29,.06) 100%)}
 }
+
+
+/* OFFICIAL ROIV BRAND SYSTEM — midnight navy, emblem red, metallic gold and ivory */
+:root{
+ --navy:#08172f;
+ --navy2:#12284a;
+ --ink:#17243a;
+ --muted:#687181;
+ --paper:#f7f3e9;
+ --white:#fffdf7;
+ --accent:#d4ad62;
+ --line:#e8dfca;
+}
+body{background:var(--white);color:var(--ink)}
+.topbar{background:#061126;color:#e8dfca}
+.topbar a{color:#f8f0d8}
+.site-header{background:#fffdf7;border-bottom:1px solid #e8dfca}
+.brand{gap:12px;min-width:0}
+.brand-logo{display:block;width:66px;height:66px;object-fit:contain;flex:0 0 auto;filter:drop-shadow(0 3px 5px #08172f20)}
+.brand-name{color:#08172f;letter-spacing:.13em}
+.brand-name small{color:#8a7653}
+.main-nav>a:not(.nav-cta){color:#4d5a6d}
+.main-nav>a.active,.main-nav>a:hover{color:#a92518}
+.nav-cta{background:#a92518;color:#fffdf7;border:1px solid #d4ad62}
+.nav-cta span{color:#f4d58f}
+.menu-toggle span{background:#08172f}
+.hero,.hero-split{background:#08172f}
+.hero-split .hero-shade{background:linear-gradient(90deg,rgba(5,16,36,.98) 0%,rgba(7,22,47,.93) 39%,rgba(7,22,47,.72) 58%,rgba(7,22,47,.12) 100%),linear-gradient(0deg,rgba(5,16,36,.52),transparent 38%)}
+.hero-premium h1 em,.hero-split h1 em{color:#e0bd78}
+.hero-kicker,.hero-premium .hero-kicker{color:#f0d99f}
+.hero-kicker span,.proof-line{background:#d4ad62}
+.button-accent,.hero-split .button{background:#a92518;color:#fffdf7;border:1px solid #d4ad62}
+.button-accent:hover,.hero-split .button:hover{background:#851b13;color:#fff}
+.hero-video-link,.hero-link-arrow{color:#f8f0d8}
+.hero-proof{color:#f4ead2}
+.stat-ribbon,.stat-grid{background:#0b1e3b;color:#fff}
+.stat-ribbon{border-top:1px solid #d4ad62}
+.stat-grid strong{color:#e0bd78}
+.stat-grid span{color:#e9dfc9}
+.editorial-services,.services-section{background:#f7f3e9}
+.editorial-heading h2 em,.section-heading h2 em{color:#a92518}
+.editorial-card-copy small{color:#f0d99f}
+.advantage-section{background:#a92518}
+.advantage-section .eyebrow.light{color:#f4d58f}
+.process-premium,.process-band,.page-hero{background:#08172f}
+.process-premium .eyebrow.light,.process-band .eyebrow.light{color:#e0bd78}
+.process-steps article,.process-list>div{border-color:#ffffff26}
+.values-premium,.values-section{background:#fffdf7}
+.values-grid article{border-color:#d8c9a8}
+.values-grid article span{color:#a92518}
+.cta-premium,.cta-section{background:#102447}
+.site-footer{background:#061126}
+.brand-footer .brand-logo{width:78px;height:78px}
+.footer-main h4{color:#f0d99f}
+.footer-availability{color:#e0bd78!important}
+.page-hero h1 em{color:#e0bd78}
+.breadcrumbs a,.article-card .tag,.article-card a{color:#a92518}
+.contact-details{background:#08172f;border:1px solid #d4ad62}
+.arrow-link{color:#08172f;border-color:#d4ad62}
+.arrow-link span,.card-arrow,.service-icon{color:#a92518}
+.service-card:hover{border-color:#d4ad62}
+.feature-box{background:#f7f3e9;border:1px solid #e8dfca}
+.service-aside{background:#f7f3e9;border:1px solid #e8dfca}
+.button-outline:hover{border-color:#e0bd78;color:#e0bd78}
+@media(max-width:680px){
+ .brand-logo{width:56px;height:56px}
+ .brand-name{font-size:11px}
+ .main-nav{background:#fffdf7}
+ .main-nav>a{border-color:#eee5d2}
+ .hero-split .hero-shade{background:linear-gradient(90deg,rgba(5,16,36,.95),rgba(7,22,47,.74)),linear-gradient(0deg,#08172f 0%,rgba(8,23,47,.76) 46%,transparent 100%)}
+ .brand-footer .brand-logo{width:68px;height:68px}
+}
