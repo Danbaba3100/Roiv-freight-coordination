@@ -272,3 +272,44 @@ body{background:var(--white);color:var(--ink)}
  .hero-split .hero-shade{background:linear-gradient(90deg,rgba(5,16,36,.95),rgba(7,22,47,.74)),linear-gradient(0deg,#08172f 0%,rgba(8,23,47,.76) 46%,transparent 100%)}
  .brand-footer .brand-logo{width:68px;height:68px}
 }
+
+/* Editorial freight imagery across inner pages */
+.image-story{padding:58px 0;background:#f7f3e9}
+.image-story-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:58px;align-items:center}
+.image-story-photo{height:390px;overflow:hidden;position:relative}
+.image-story-photo img,.about-wide-photo img,.services-photo-banner img,.service-photo,.services-bottom-image>img,.blog-feature>img,.article-photo,.contact-photo-banner>img{width:100%;height:100%;object-fit:cover;display:block}
+.image-story-copy h2,.services-bottom-image h2,.blog-feature h2,.contact-photo-banner h2{font:800 clamp(28px,3.4vw,43px) Manrope;line-height:1.12;letter-spacing:-.04em}
+.image-story-copy p:not(.eyebrow){color:#667180;max-width:480px}
+.image-story-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.image-story-tags span{font-size:10px;font-weight:700;letter-spacing:.05em;padding:9px 12px;border:1px solid #d4ad62;color:#17243a}
+.about-wide-photo{height:330px;margin:55px 0 42px;position:relative;overflow:hidden}
+.about-wide-photo:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#061126b8)}
+.about-wide-photo span{position:absolute;z-index:1;bottom:22px;left:25px;color:#fff;font:700 11px Manrope;letter-spacing:.18em}
+.services-photo-banner{height:300px;position:relative;overflow:hidden;margin-bottom:32px}
+.services-photo-banner:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#061126e8,#06112618)}
+.services-photo-banner>div{position:absolute;z-index:1;left:38px;top:50%;transform:translateY(-50%);max-width:490px;color:#fff;display:grid;gap:12px}
+.services-photo-banner span{font-size:10px;letter-spacing:.2em;color:#f0d99f;font-weight:700}
+.services-photo-banner strong{font:800 clamp(25px,3.4vw,40px) Manrope;line-height:1.15}
+.service-image-grid .service-card{padding:0 0 25px;overflow:hidden}
+.service-photo{height:150px;margin-bottom:20px}
+.service-image-grid .service-number,.service-image-grid h3,.service-image-grid p{margin-left:22px;margin-right:22px}
+.service-image-grid .service-icon{position:absolute;right:20px;top:163px;margin:0;background:#fffdf7;padding:8px 11px;font-size:21px}
+.service-image-grid .card-arrow{bottom:15px}
+.services-bottom-image{height:360px;position:relative;overflow:hidden;margin:70px 0 15px}
+.services-bottom-image:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#061126ed,#06112630)}
+.services-bottom-image>div{position:absolute;z-index:1;top:50%;left:42px;transform:translateY(-50%);max-width:560px;color:#fff}
+.services-bottom-image h2{margin:12px 0 23px}
+.blog-feature{height:330px;position:relative;overflow:hidden;margin-bottom:32px}
+.blog-feature:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#061126e8,#06112625)}
+.blog-feature>div{position:absolute;z-index:1;top:50%;left:38px;transform:translateY(-50%);max-width:550px;color:#fff}
+.blog-feature h2{margin:10px 0;color:#fff}
+.blog-feature p:not(.eyebrow){color:#eee5d2}
+.blog-image-grid .article-card{padding:0 0 24px;overflow:hidden}
+.article-photo{height:180px;margin-bottom:20px}
+.blog-image-grid .tag,.blog-image-grid h2,.blog-image-grid p,.blog-image-grid .notice{margin-left:22px;margin-right:22px}
+.contact-photo-banner{height:260px;position:relative;overflow:hidden;margin-bottom:38px}
+.contact-photo-banner:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#061126dc,#06112620)}
+.contact-photo-banner>div{position:absolute;z-index:1;left:35px;top:50%;transform:translateY(-50%);max-width:580px;color:#fff}
+.contact-photo-banner h2{margin:8px 0 0}
+@media(max-width:900px){.image-story-grid{gap:28px}.service-photo{height:130px}.service-image-grid .service-icon{top:143px}}
+@media(max-width:680px){.image-story{padding:38px 0}.image-story-grid{grid-template-columns:1fr;gap:24px}.image-story-photo{height:245px}.about-wide-photo{height:230px;margin:35px 0}.services-photo-banner,.blog-feature{height:260px}.services-photo-banner>div,.blog-feature>div,.services-bottom-image>div,.contact-photo-banner>div{left:22px;right:20px}.service-image-grid{grid-template-columns:1fr}.service-photo{height:190px}.service-image-grid .service-icon{top:203px}.services-bottom-image{height:300px;margin:45px 0 5px}.contact-photo-banner{height:235px}.article-photo{height:200px}}
