@@ -330,3 +330,16 @@ body{background:var(--white);color:var(--ink)}
 .page-hero h1,.page-hero p{color:#fffdf7}
 .page-hero .eyebrow{color:#e0bd78}
 @media(max-width:680px){.page-hero{min-height:300px;padding:52px 0;background-position:center}.page-hero:before{background:linear-gradient(90deg,rgba(5,16,36,.92),rgba(7,22,47,.70)),linear-gradient(0deg,rgba(5,16,36,.4),transparent)}}
+
+/* Equipment-specific dispatch imagery */
+.content-section .service-grid .service-card:nth-child(1){background-image:url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=900&q=85')}
+.content-section .service-grid .service-card:nth-child(2){background-image:url('https://media.sandhills.com/img.axd?c=True&checksum=Ouq9qWLBHGUOS7zbyCYvHokNjCTHatndyW8TDQ8ZnGk%3D&ext=&h=460&id=9043795028&lp=&p=&rt=0&rwl=False&sz=Max&t=&w=614&wid=4326209787&wt=False')}
+.content-section .service-grid .service-card:nth-child(3){background-image:url('https://images.craigslist.org/00J0J_2giRxxdwqNV_1320MM_600x450.jpg')}
+.content-section .service-grid .service-card:nth-child(4){background-image:url('https://truckstop-assets.sfo2.digitaloceanspaces.com/images/site/general/Flatbed%20-%20Carriers%20-%20Types%20of%20Loads.png')}
+.content-section .service-grid .service-card:nth-child(5){background-image:url('https://cdn.prod.website-files.com/65e64d38b2c210a3baeab3ee/66423cd6dc1e2073ded60f1e_step%20deck%20slide%201.webp')}
+.page-hero-reefer{background-image:url('https://media.sandhills.com/img.axd?c=True&checksum=Ouq9qWLBHGUOS7zbyCYvHokNjCTHatndyW8TDQ8ZnGk%3D&ext=&h=460&id=9043795028&lp=&p=&rt=0&rwl=False&sz=Max&t=&w=614&wid=4326209787&wt=False')!important}
+.page-hero-boxtruck{background-image:url('https://images.craigslist.org/00J0J_2giRxxdwqNV_1320MM_600x450.jpg')!important}
+.page-hero-flatbed{background-image:url('https://truckstop-assets.sfo2.digitaloceanspaces.com/images/site/general/Flatbed%20-%20Carriers%20-%20Types%20of%20Loads.png')!important}
+.page-hero-stepdeck{background-image:url('https://cdn.prod.website-files.com/65e64d38b2c210a3baeab3ee/66423cd6dc1e2073ded60f1e_step%20deck%20slide%201.webp')!important}
+@media(min-width:901px){.fleet-grid{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:260px 260px}.fleet-large{grid-row:span 2}.fleet-wide{grid-column:span 2}}
+@media(max-width:680px){.fleet-grid{grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,210px)}.fleet-large{grid-row:auto;grid-column:span 2}.fleet-wide{grid-column:span 2}}
