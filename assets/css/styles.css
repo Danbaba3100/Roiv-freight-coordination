@@ -142,3 +142,61 @@
  .hero-split .proof-line{width:25px}
  .hero-image-caption{right:18px;bottom:17px;font-size:6px;gap:8px}
 }
+
+
+/* ROIV WARM BRAND PALETTE — replace cold navy with charcoal, ivory and burnt orange */
+:root{
+ --navy:#26211e;
+ --navy2:#382d27;
+ --ink:#2d2521;
+ --muted:#756a63;
+ --paper:#f6f1eb;
+ --white:#fffdfa;
+ --accent:#c4512c;
+ --line:#e8ddd3;
+}
+body{background:#fffdfa;color:#2d2521}
+.topbar{background:#211b18;color:#e9ddd3}
+.site-header{background:#fffdfa;border-bottom-color:#eee5dc}
+.brand-mark{background:linear-gradient(145deg,#3b2c25,#211b18);border-color:#c99a59}
+.brand-name small{color:#8b7b70}
+.main-nav>a:not(.nav-cta){color:#65574f}
+.main-nav>a.active,.main-nav>a:hover{color:#bd4b29}
+.nav-cta{background:#bd4b29;color:#fff}
+.nav-cta span{color:#f2c987}
+.menu-toggle span{background:#342923}
+.hero,.hero-split{background:#28211d}
+.hero-split .hero-image{background-image:url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=2200&q=90')}
+.hero-split .hero-shade{background:linear-gradient(90deg,#28211d 0%,#28211d 38%,rgba(40,33,29,.94) 45%,rgba(40,33,29,.34) 66%,rgba(40,33,29,.06) 100%),linear-gradient(0deg,rgba(24,17,14,.52),transparent 32%)}
+.hero-split h1 em{color:#e6b967}
+.hero-split .hero-kicker{color:#edc77f}
+.hero-split .button,.button-accent{background:#c4512c;color:#fff}
+.hero-split .button:hover,.button-accent:hover{background:#a83e20;color:#fff}
+.hero-link-arrow,.hero-split .proof-line,.hero-image-caption span{color:#e7bd76}
+.stat-ribbon{background:#302721;border-top-color:#c99a59}
+.stat-grid strong{color:#e5b96f}
+.stat-grid span{color:#e0d2c7}
+.editorial-services,.services-section{background:#f6f1eb}
+.advantage-section{background:#b94725}
+.process-premium,.process-band{background:#2c2420}
+.process-premium .eyebrow.light,.process-band .eyebrow.light{color:#e8bd78}
+.values-premium,.values-section{background:#fffdfa}
+.cta-premium{background:#2b231f}
+.cta-section{background:#3a2b24}
+.site-footer{background:#1d1815}
+.brand-footer .brand-mark{background:#382a23}
+.page-hero{background:#2c2420}
+.breadcrumbs a,.article-card .tag{color:#bd4b29}
+.contact-details{background:#2c2420}
+.arrow-link{color:#3a2b24}
+.arrow-link span,.card-arrow{color:#bd4b29}
+.service-icon{color:#bd4b29}
+.service-card:hover{border-color:#d7a36c}
+.values-grid article span{color:#bd4b29}
+.button-outline:hover{border-color:#e2b56e;color:#e2b56e}
+@media(max-width:900px){
+ .hero-split .hero-shade{background:linear-gradient(90deg,#28211d 0%,rgba(40,33,29,.97) 32%,rgba(40,33,29,.78) 58%,rgba(40,33,29,.25) 100%),linear-gradient(0deg,rgba(24,17,14,.55),transparent 40%)}
+}
+@media(max-width:680px){
+ .hero-split .hero-shade{background:linear-gradient(90deg,rgba(40,33,29,.91),rgba(40,33,29,.58)),linear-gradient(0deg,#28211d 0%,rgba(40,33,29,.84) 42%,rgba(40,33,29,.06) 100%)}
+}
