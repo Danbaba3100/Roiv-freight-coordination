@@ -383,3 +383,7 @@ body{background:var(--white);color:var(--ink)}
 .wyoming-services-address{display:flex;flex-wrap:wrap;gap:10px 24px;padding-top:22px;margin-top:26px;border-top:1px solid #ded7c9;color:#08172f;font-size:14px}
 .wyoming-services-address a{font-weight:800}
 @media(max-width:760px){.wyoming-local-grid{grid-template-columns:1fr;gap:32px}.wyoming-local-section{padding-top:58px;padding-bottom:58px}.wyoming-local-card{padding:26px}.wyoming-local-actions{flex-direction:column;gap:14px}.wyoming-services-note{padding:52px 20px}}
+
+/* WYOMING LOCAL SEO CONTENT STRIP */
+.local-seo-note{padding:52px 0;background:#f3f1ec;border-top:1px solid #e3e7eb}.local-seo-note .container{max-width:920px}.local-seo-note .eyebrow{margin-bottom:12px}.local-seo-note p:not(.eyebrow){color:#596777;font-size:14px;line-height:1.85;margin-bottom:10px}.local-seo-note a:not(.arrow-link){color:#8c642f;text-decoration:underline;text-underline-offset:3px}.local-seo-note .arrow-link{margin-top:8px}
+@media(max-width:680px){.local-seo-note{padding:38px 0}.local-seo-note p:not(.eyebrow){font-size:13px}}
