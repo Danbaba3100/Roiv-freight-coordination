@@ -387,3 +387,8 @@ body{background:var(--white);color:var(--ink)}
 /* WYOMING LOCAL SEO CONTENT STRIP */
 .local-seo-note{padding:52px 0;background:#f3f1ec;border-top:1px solid #e3e7eb}.local-seo-note .container{max-width:920px}.local-seo-note .eyebrow{margin-bottom:12px}.local-seo-note p:not(.eyebrow){color:#596777;font-size:14px;line-height:1.85;margin-bottom:10px}.local-seo-note a:not(.arrow-link){color:#8c642f;text-decoration:underline;text-underline-offset:3px}.local-seo-note .arrow-link{margin-top:8px}
 @media(max-width:680px){.local-seo-note{padding:38px 0}.local-seo-note p:not(.eyebrow){font-size:13px}}
+
+
+/* SEO landing-page FAQs: accessible, readable content blocks */
+.seo-faq-section{padding:68px 0;background:#fffdf7;border-top:1px solid #e8dfca}.seo-faq-wrap{max-width:900px}.seo-faq-wrap>h2{font:800 clamp(26px,3.4vw,38px) Manrope;color:#08172f;line-height:1.2;margin:0 0 28px}.seo-faq{padding:20px 0;border-bottom:1px solid #e8dfca}.seo-faq h3{font:700 17px Manrope;color:#12284a;margin:0 0 8px}.seo-faq p,.seo-faq-contact{color:#596777;line-height:1.8;margin:0}.seo-faq-contact{margin-top:24px}.seo-faq-contact a,.seo-faq a{color:#8c642f;text-decoration:underline;text-underline-offset:3px;font-weight:700}
+@media(max-width:680px){.seo-faq-section{padding:44px 0}.seo-faq{padding:16px 0}.seo-faq h3{font-size:16px}}
