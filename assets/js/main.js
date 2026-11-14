@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded',()=>{
   const toggle=document.querySelector('.menu-toggle');
   const nav=document.querySelector('.main-nav');
+
   if(toggle&&nav){
     toggle.addEventListener('click',()=>{
       const open=nav.classList.toggle('open');
@@ -13,25 +14,51 @@ document.addEventListener('DOMContentLoaded',()=>{
     }));
   }
 
-  document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());
+  document.querySelectorAll('[data-year]').forEach(el=>{
+    el.textContent=new Date().getFullYear();
+  });
 
-  // Reveal key content as it enters the viewport. No animation library required.
+  // Apply the same cinematic reveal language across every page.
   const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const revealGroups=[
+    '.hero-premium .hero-content > *',
+    '.page-hero .container > *',
     '.stat-grid > div',
+    '.trust-grid > div',
     '.intro-photo-wrap',
     '.intro-text > *',
     '.fleet-card',
+    '.service-card',
+    '.feature-box',
+    '.article-card',
+    '.testimonial-card',
     '.process-premium-grid > *',
     '.process-steps article',
+    '.process-list > div',
     '.values-grid article',
-    '.cta-premium-inner > *'
+    '.cta-premium-inner > *',
+    '.cta-inner > *',
+    '.content-section > .container > *',
+    '.content-section .container > .content-narrow > *',
+    '.service-detail > *',
+    '.contact-grid > *',
+    '.seo-faq-wrap > *',
+    '.seo-faq',
+    '.article-detail-wrap > *',
+    '.wyoming-local-grid > *',
+    '.local-seo-note .container > *',
+    '.site-footer .footer-main > *'
   ];
+
+  const revealSet=new Set();
   revealGroups.forEach(selector=>{
-    document.querySelectorAll(selector).forEach((element,index)=>{
-      element.setAttribute('data-reveal','');
-      element.style.setProperty('--reveal-delay',Math.min(index%5,4)*100+'ms');
-    });
+    document.querySelectorAll(selector).forEach(element=>revealSet.add(element));
+  });
+
+  revealSet.forEach((element,index)=>{
+    if(element.hasAttribute('data-reveal')) return;
+    element.setAttribute('data-reveal','');
+    element.style.setProperty('--reveal-delay',Math.min(index%6,5)*85+'ms');
   });
 
   const revealItems=document.querySelectorAll('[data-reveal]');
@@ -45,8 +72,7 @@ document.addEventListener('DOMContentLoaded',()=>{
           activeObserver.unobserve(entry.target);
         }
       });
-    },{threshold:.12,rootMargin:'0px 0px -45px 0px'});
+    },{threshold:.1,rootMargin:'0px 0px -40px 0px'});
     revealItems.forEach(element=>observer.observe(element));
   }
-
 });
