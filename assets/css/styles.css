@@ -387,3 +387,390 @@ body{background:var(--white);color:var(--ink)}
 /* WYOMING LOCAL SEO CONTENT STRIP */
 .local-seo-note{padding:52px 0;background:#f3f1ec;border-top:1px solid #e3e7eb}.local-seo-note .container{max-width:920px}.local-seo-note .eyebrow{margin-bottom:12px}.local-seo-note p:not(.eyebrow){color:#596777;font-size:14px;line-height:1.85;margin-bottom:10px}.local-seo-note a:not(.arrow-link){color:#8c642f;text-decoration:underline;text-underline-offset:3px}.local-seo-note .arrow-link{margin-top:8px}
 @media(max-width:680px){.local-seo-note{padding:38px 0}.local-seo-note p:not(.eyebrow){font-size:13px}}
+
+
+/* SEO landing-page FAQs: accessible, readable content blocks */
+.seo-faq-section{padding:68px 0;background:#fffdf7;border-top:1px solid #e8dfca}.seo-faq-wrap{max-width:900px}.seo-faq-wrap>h2{font:800 clamp(26px,3.4vw,38px) Manrope;color:#08172f;line-height:1.2;margin:0 0 28px}.seo-faq{padding:20px 0;border-bottom:1px solid #e8dfca}.seo-faq h3{font:700 17px Manrope;color:#12284a;margin:0 0 8px}.seo-faq p,.seo-faq-contact{color:#596777;line-height:1.8;margin:0}.seo-faq-contact{margin-top:24px}.seo-faq-contact a,.seo-faq a{color:#8c642f;text-decoration:underline;text-underline-offset:3px;font-weight:700}
+@media(max-width:680px){.seo-faq-section{padding:44px 0}.seo-faq{padding:16px 0}.seo-faq h3{font-size:16px}}
+
+
+/* MOBILE OVERFLOW GUARD — keep every page within the viewport */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+}
+
+@supports (overflow: clip) {
+  html,
+  body {
+    overflow-x: clip;
+  }
+}
+
+img,
+svg,
+video,
+iframe,
+canvas {
+  max-width: 100%;
+}
+
+.container,
+.container > *,
+[class*="grid"] > *,
+.split > *,
+.process-layout > *,
+.process-premium-grid > *,
+.service-detail > *,
+.contact-grid > *,
+.intro-premium-grid > *,
+.wyoming-local-grid > * {
+  min-width: 0;
+}
+
+p,
+li,
+a,
+h1,
+h2,
+h3,
+h4,
+strong,
+span {
+  overflow-wrap: break-word;
+}
+
+table {
+  max-width: 100%;
+}
+
+@media (max-width: 680px) {
+  .container {
+    width: calc(100% - 32px);
+    max-width: 100%;
+  }
+
+  .topbar-inner,
+  .nav-wrap,
+  .hero-actions,
+  .cta-inner,
+  .footer-bottom {
+    min-width: 0;
+  }
+
+  .brand {
+    min-width: 0;
+    max-width: calc(100% - 52px);
+  }
+
+  .brand-name {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .main-nav {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero,
+  .hero-premium,
+  .hero-split,
+  .page-hero,
+  .section,
+  .content-section,
+  .site-footer {
+    max-width: 100%;
+  }
+
+  .fleet-grid,
+  .editorial-grid,
+  .service-grid,
+  .feature-grid,
+  .article-grid,
+  .values-grid,
+  .trust-grid,
+  .stat-grid {
+    min-width: 0;
+  }
+
+  .button,
+  .nav-cta {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .services-photo-banner > div,
+  .blog-feature > div,
+  .services-bottom-image > div,
+  .contact-photo-banner > div {
+    max-width: calc(100% - 42px);
+  }
+}
+
+
+/* Contact form accessibility and spam-trap field */
+.form-honeypot{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.contact-form button[disabled]{opacity:.65;cursor:wait}
+.contact-form [data-form-status]{min-height:1.5em}
+
+
+/* Client testimonials — homepage */
+.client-testimonials{background:#08172f;color:#fffdf7;padding-top:88px;padding-bottom:88px}
+.client-testimonials .section-heading h2{color:#fffdf7}
+.client-testimonials .section-heading h2 em{color:#e0bd78;font-style:normal}
+.client-testimonials .section-intro{color:#d3dbe5}
+.testimonial-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:42px}
+.testimonial-card{position:relative;display:flex;flex-direction:column;min-width:0;padding:30px 26px 26px;background:#12284a;border:1px solid rgba(224,189,120,.28);border-top:3px solid #d4ad62}
+.testimonial-mark{height:34px;color:#e0bd78;font-family:Georgia,serif;font-size:54px;line-height:1}
+.testimonial-card blockquote{flex:1;margin:12px 0 26px;color:#f7f3e9;font-size:15px;line-height:1.85}
+.testimonial-author{display:flex;flex-direction:column;gap:4px;padding-top:17px;border-top:1px solid rgba(255,255,255,.16)}
+.testimonial-author strong{color:#fffdf7;font-size:14px;letter-spacing:.04em}
+.testimonial-author span{color:#e0bd78;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.testimonial-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:34px;padding-top:26px;border-top:1px solid rgba(255,255,255,.18)}
+.testimonial-cta p{margin:0;color:#e5e9ef;font-size:15px}
+.testimonial-cta .arrow-link{color:#fffdf7}
+.testimonial-cta .arrow-link span{color:#e0bd78}
+@media(max-width:900px){.testimonial-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.client-testimonials{padding-top:58px;padding-bottom:58px}.testimonial-grid{grid-template-columns:1fr;gap:14px;margin-top:28px}.testimonial-card{padding:25px 22px}.testimonial-card blockquote{font-size:14px}.testimonial-cta{align-items:flex-start;flex-direction:column;gap:12px}}
+
+
+/* ROIV SIGNATURE MOTION SYSTEM — consistent across every page */
+:root {
+  --motion-ease: cubic-bezier(.22, 1, .36, 1);
+  --motion-duration: 760ms;
+}
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 26px, 0);
+  transition:
+    opacity var(--motion-duration) var(--motion-ease),
+    transform var(--motion-duration) var(--motion-ease);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  will-change: auto;
+}
+.page-hero [data-reveal] {
+  transform: translate3d(0, 34px, 0);
+}
+.page-hero [data-reveal].is-visible {
+  transform: translate3d(0, 0, 0);
+}
+.site-header {
+  transition: box-shadow 300ms ease, background-color 300ms ease;
+}
+.main-nav > a:not(.nav-cta) {
+  position: relative;
+  transition: color 240ms ease;
+}
+.main-nav > a:not(.nav-cta)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 5px;
+  height: 1px;
+  background: var(--accent);
+  transition: right 300ms var(--motion-ease);
+}
+.main-nav > a:not(.nav-cta):hover::after,
+.main-nav > a:not(.nav-cta).active::after {
+  right: 0;
+}
+.button, .nav-cta, .arrow-link, .article-read-link {
+  transition: transform 280ms var(--motion-ease), color 240ms ease,
+    background-color 240ms ease, box-shadow 280ms ease;
+}
+.button:hover, .nav-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(4, 13, 28, .18);
+}
+.service-card, .feature-box, .article-card, .testimonial-card,
+.wyoming-local-card, .seo-faq {
+  transition: transform 420ms var(--motion-ease), box-shadow 420ms ease,
+    border-color 300ms ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .service-card:hover, .feature-box:hover, .article-card:hover,
+  .testimonial-card:hover, .wyoming-local-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 44px rgba(8, 23, 47, .12);
+  }
+  .seo-faq:hover {
+    transform: translateX(5px);
+  }
+  .fleet-card img, .article-photo, .service-photo,
+  .image-story-photo, .about-wide-photo {
+    transition: transform 850ms var(--motion-ease), filter 850ms ease;
+  }
+  .fleet-card:hover img, .article-card:hover .article-photo,
+  .service-card:hover .service-photo {
+    transform: scale(1.045);
+  }
+}
+.hero-premium .hero-image {
+  animation: roiv-hero-drift 18s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+.page-hero {
+  background-size: 106% auto;
+  animation: roiv-page-hero 18s ease-in-out infinite alternate;
+}
+@keyframes roiv-hero-drift {
+  from { transform: scale(1.01) translate3d(0, 0, 0); }
+  to { transform: scale(1.075) translate3d(-.6%, .3%, 0); }
+}
+@keyframes roiv-page-hero {
+  from { background-position: center 48%; }
+  to { background-position: center 54%; }
+}
+@media (max-width: 680px) {
+  .page-hero { background-size: cover; animation-duration: 24s; }
+  .hero-premium .hero-image { animation-duration: 24s; }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal], [data-reveal].is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    will-change: auto !important;
+  }
+  .hero-premium .hero-image, .page-hero {
+    animation: none !important;
+  }
+  .main-nav > a:not(.nav-cta)::after {
+    transition: none !important;
+  }
+}
+
+
+/* ROIV MOTION 2.0 — cinematic, layered, and deliberately restrained */
+:root {
+  --roiv-motion-out: cubic-bezier(.16, 1, .3, 1);
+  --roiv-motion-spring: cubic-bezier(.2, .85, .25, 1);
+}
+#roiv-scroll-progress {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  pointer-events: none;
+  transform: scaleX(0);
+  transform-origin: left center;
+  background: linear-gradient(90deg, #a92518 0%, #d4ad62 55%, #f2d99f 100%);
+  box-shadow: 0 0 14px rgba(212, 173, 98, .45);
+}
+[data-reveal] {
+  transition:
+    opacity 900ms var(--roiv-motion-out),
+    transform 1000ms var(--roiv-motion-out),
+    filter 900ms var(--roiv-motion-out);
+}
+[data-reveal][data-motion="left"] { transform: translate3d(-54px, 12px, 0); }
+[data-reveal][data-motion="right"] { transform: translate3d(54px, 12px, 0); }
+[data-reveal][data-motion="scale"] { transform: translate3d(0, 24px, 0) scale(.94); }
+[data-reveal][data-motion="blur"] { transform: translate3d(0, 22px, 0); filter: blur(8px); }
+[data-reveal].is-visible {
+  transform: translate3d(0, 0, 0) scale(1);
+  filter: blur(0);
+}
+.page-hero .eyebrow,
+.hero-premium .eyebrow {
+  animation: roiv-eyebrow-in 900ms 100ms both var(--roiv-motion-out);
+}
+.page-hero h1,
+.hero-premium h1 {
+  animation: roiv-title-in 1200ms 180ms both var(--roiv-motion-out);
+}
+.page-hero p,
+.hero-premium .hero-content p {
+  animation: roiv-copy-in 1100ms 420ms both var(--roiv-motion-out);
+}
+.page-hero .button,
+.hero-premium .button {
+  animation: roiv-button-in 900ms 620ms both var(--roiv-motion-out);
+}
+@keyframes roiv-eyebrow-in {
+  from { opacity: 0; transform: translate3d(0, 18px, 0); letter-spacing: .32em; }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+@keyframes roiv-title-in {
+  from { opacity: 0; transform: translate3d(0, 42px, 0); filter: blur(10px); clip-path: inset(0 0 45% 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); filter: blur(0); clip-path: inset(0 0 0 0); }
+}
+@keyframes roiv-copy-in {
+  from { opacity: 0; transform: translate3d(0, 24px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+@keyframes roiv-button-in {
+  from { opacity: 0; transform: translate3d(0, 18px, 0) scale(.96); }
+  to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+}
+.section-heading h2 em {
+  display: inline-block;
+  transform-origin: left center;
+  transition: color 450ms ease, text-shadow 450ms ease;
+}
+.section-heading:hover h2 em {
+  color: #a92518;
+  text-shadow: 0 8px 28px rgba(169, 37, 24, .12);
+}
+@media (hover: hover) and (pointer: fine) {
+  .service-card, .feature-box, .article-card, .testimonial-card,
+  .fleet-card, .value-card {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+  }
+  .service-card:hover, .feature-box:hover, .article-card:hover,
+  .testimonial-card:hover, .wyoming-local-card:hover {
+    transform: perspective(1000px) rotateX(var(--roiv-tilt-x, 0deg)) rotateY(var(--roiv-tilt-y, 0deg)) translate3d(0, -8px, 0);
+  }
+  .service-card::after, .feature-box::after, .article-card::after,
+  .testimonial-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    background: radial-gradient(circle at var(--roiv-glow-x, 50%) var(--roiv-glow-y, 50%), rgba(224, 189, 120, .16), transparent 48%);
+    transition: opacity 350ms ease;
+  }
+  .service-card:hover::after, .feature-box:hover::after,
+  .article-card:hover::after, .testimonial-card:hover::after { opacity: 1; }
+}
+.hero-premium, .page-hero {
+  isolation: isolate;
+}
+.hero-premium::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(115deg, transparent 30%, rgba(224,189,120,.09) 48%, transparent 66%);
+  transform: translateX(-110%);
+  animation: roiv-light-sweep 1.8s 500ms var(--roiv-motion-out) both;
+}
+@keyframes roiv-light-sweep {
+  to { transform: translateX(110%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  #roiv-scroll-progress { display: none; }
+  [data-reveal], [data-reveal].is-visible {
+    filter: none !important;
+  }
+  .page-hero .eyebrow, .hero-premium .eyebrow,
+  .page-hero h1, .hero-premium h1, .page-hero p,
+  .hero-premium .hero-content p, .page-hero .button,
+  .hero-premium .button, .hero-premium::after {
+    animation: none !important;
+  }
+}
