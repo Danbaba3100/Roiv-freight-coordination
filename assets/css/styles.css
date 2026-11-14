@@ -514,3 +514,23 @@ table {
 .form-honeypot{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
 .contact-form button[disabled]{opacity:.65;cursor:wait}
 .contact-form [data-form-status]{min-height:1.5em}
+
+
+/* Client testimonials — homepage */
+.client-testimonials{background:#08172f;color:#fffdf7;padding-top:88px;padding-bottom:88px}
+.client-testimonials .section-heading h2{color:#fffdf7}
+.client-testimonials .section-heading h2 em{color:#e0bd78;font-style:normal}
+.client-testimonials .section-intro{color:#d3dbe5}
+.testimonial-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:42px}
+.testimonial-card{position:relative;display:flex;flex-direction:column;min-width:0;padding:30px 26px 26px;background:#12284a;border:1px solid rgba(224,189,120,.28);border-top:3px solid #d4ad62}
+.testimonial-mark{height:34px;color:#e0bd78;font-family:Georgia,serif;font-size:54px;line-height:1}
+.testimonial-card blockquote{flex:1;margin:12px 0 26px;color:#f7f3e9;font-size:15px;line-height:1.85}
+.testimonial-author{display:flex;flex-direction:column;gap:4px;padding-top:17px;border-top:1px solid rgba(255,255,255,.16)}
+.testimonial-author strong{color:#fffdf7;font-size:14px;letter-spacing:.04em}
+.testimonial-author span{color:#e0bd78;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.testimonial-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:34px;padding-top:26px;border-top:1px solid rgba(255,255,255,.18)}
+.testimonial-cta p{margin:0;color:#e5e9ef;font-size:15px}
+.testimonial-cta .arrow-link{color:#fffdf7}
+.testimonial-cta .arrow-link span{color:#e0bd78}
+@media(max-width:900px){.testimonial-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.client-testimonials{padding-top:58px;padding-bottom:58px}.testimonial-grid{grid-template-columns:1fr;gap:14px;margin-top:28px}.testimonial-card{padding:25px 22px}.testimonial-card blockquote{font-size:14px}.testimonial-cta{align-items:flex-start;flex-direction:column;gap:12px}}
