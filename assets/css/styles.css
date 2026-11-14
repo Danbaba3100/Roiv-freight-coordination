@@ -534,3 +534,116 @@ table {
 .testimonial-cta .arrow-link span{color:#e0bd78}
 @media(max-width:900px){.testimonial-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.client-testimonials{padding-top:58px;padding-bottom:58px}.testimonial-grid{grid-template-columns:1fr;gap:14px;margin-top:28px}.testimonial-card{padding:25px 22px}.testimonial-card blockquote{font-size:14px}.testimonial-cta{align-items:flex-start;flex-direction:column;gap:12px}}
+
+
+/* ROIV SIGNATURE MOTION SYSTEM — consistent across every page */
+:root {
+  --motion-ease: cubic-bezier(.22, 1, .36, 1);
+  --motion-duration: 760ms;
+}
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 26px, 0);
+  transition:
+    opacity var(--motion-duration) var(--motion-ease),
+    transform var(--motion-duration) var(--motion-ease);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  will-change: auto;
+}
+.page-hero [data-reveal] {
+  transform: translate3d(0, 34px, 0);
+}
+.page-hero [data-reveal].is-visible {
+  transform: translate3d(0, 0, 0);
+}
+.site-header {
+  transition: box-shadow 300ms ease, background-color 300ms ease;
+}
+.main-nav > a:not(.nav-cta) {
+  position: relative;
+  transition: color 240ms ease;
+}
+.main-nav > a:not(.nav-cta)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 5px;
+  height: 1px;
+  background: var(--accent);
+  transition: right 300ms var(--motion-ease);
+}
+.main-nav > a:not(.nav-cta):hover::after,
+.main-nav > a:not(.nav-cta).active::after {
+  right: 0;
+}
+.button, .nav-cta, .arrow-link, .article-read-link {
+  transition: transform 280ms var(--motion-ease), color 240ms ease,
+    background-color 240ms ease, box-shadow 280ms ease;
+}
+.button:hover, .nav-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(4, 13, 28, .18);
+}
+.service-card, .feature-box, .article-card, .testimonial-card,
+.wyoming-local-card, .seo-faq {
+  transition: transform 420ms var(--motion-ease), box-shadow 420ms ease,
+    border-color 300ms ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .service-card:hover, .feature-box:hover, .article-card:hover,
+  .testimonial-card:hover, .wyoming-local-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 44px rgba(8, 23, 47, .12);
+  }
+  .seo-faq:hover {
+    transform: translateX(5px);
+  }
+  .fleet-card img, .article-photo, .service-photo,
+  .image-story-photo, .about-wide-photo {
+    transition: transform 850ms var(--motion-ease), filter 850ms ease;
+  }
+  .fleet-card:hover img, .article-card:hover .article-photo,
+  .service-card:hover .service-photo {
+    transform: scale(1.045);
+  }
+}
+.hero-premium .hero-image {
+  animation: roiv-hero-drift 18s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+.page-hero {
+  background-size: 106% auto;
+  animation: roiv-page-hero 18s ease-in-out infinite alternate;
+}
+@keyframes roiv-hero-drift {
+  from { transform: scale(1.01) translate3d(0, 0, 0); }
+  to { transform: scale(1.075) translate3d(-.6%, .3%, 0); }
+}
+@keyframes roiv-page-hero {
+  from { background-position: center 48%; }
+  to { background-position: center 54%; }
+}
+@media (max-width: 680px) {
+  .page-hero { background-size: cover; animation-duration: 24s; }
+  .hero-premium .hero-image { animation-duration: 24s; }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal], [data-reveal].is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    will-change: auto !important;
+  }
+  .hero-premium .hero-image, .page-hero {
+    animation: none !important;
+  }
+  .main-nav > a:not(.nav-cta)::after {
+    transition: none !important;
+  }
+}
