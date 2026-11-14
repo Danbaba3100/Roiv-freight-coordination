@@ -49,36 +49,4 @@ document.addEventListener('DOMContentLoaded',()=>{
     revealItems.forEach(element=>observer.observe(element));
   }
 
-  const form=document.querySelector('[data-contact-form]');
-  if(form){
-    const status=form.querySelector('[data-form-status]');
-    form.addEventListener('submit',async event=>{
-      event.preventDefault();
-      if(!form.reportValidity()) return;
-      const submit=form.querySelector('button[type="submit"]');
-      const original=submit.textContent;
-      submit.disabled=true;
-      submit.textContent='Sending enquiry…';
-      if(status) status.textContent='Sending your enquiry. Please wait.';
-      try{
-        const response=await fetch(form.action,{
-          method:'POST',
-          headers:{'Content-Type':'application/json','Accept':'application/json'},
-          body:JSON.stringify(Object.fromEntries(new FormData(form)))
-        });
-        const result=await response.json();
-        if(result.success===true || result.success==='true'){
-          form.reset();
-          if(status) status.textContent='Thank you. Your enquiry has been submitted. Roiv Freight Coordination will follow up using the contact details you provided.';
-        }else{
-          throw new Error(result.message || 'The enquiry could not be submitted.');
-        }
-      }catch(error){
-        if(status) status.textContent='We could not confirm submission. Please email info@roivfreightc.com or call (307) 317-4460 directly.';
-      }finally{
-        submit.disabled=false;
-        submit.textContent=original;
-      }
-    });
-  }
 });
