@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.roivfc.com/sitemap.xml
+Sitemap: https://www.roivfreightc.com/sitemap.xml
