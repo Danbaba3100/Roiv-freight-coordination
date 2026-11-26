@@ -774,3 +774,9 @@ table {
     animation: none !important;
   }
 }
+
+
+/* Service page section heading for accessible equipment-card hierarchy */
+.service-intro-heading{max-width:760px;margin:34px 0 22px}
+.service-intro-heading h2{font:700 28px Manrope,sans-serif;line-height:1.2;margin:0 0 10px;color:var(--navy)}
+.service-intro-heading p{max-width:650px;margin:0;color:#687583;font-size:14px;line-height:1.75}
